@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal per a Samara</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Un regal especial amb records, cançons i sorpreses per a Samara">
+    <meta name="theme-color" content="#7b2ff2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Samara">
+    <meta name="msapplication-TileColor" content="#7b2ff2">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjIiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CjxwYXRoIGQ9Ik05MCA0NUg5MFYxMzVINzVWNDVINzVaIiBmaWxsPSJ3aGl0ZSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iMTgwIiB5Mj0iMTgwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmOWQ0MjM7c3RvcC1vcGFjaXR5OjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmY0ZTUwO3N0b3Atb3BhY2l0eToxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPHBhdGggZD0iTTE2IDhIMTZWMjRIMTZWMjRaIiBmaWxsPSJ3aGl0ZSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAiIHkxPSIwIiB4Mj0iMzIiIHkyPSIzMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjlkNDIzO3N0b3Atb3BhY2l0eToxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmNGU1MDtzdG9wLW9wYWNpdHk6MSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPg==">
+</head>
+<body>
+    <audio id="audio-fons" src="musica/canço.mp3" loop style="display:none;"></audio>
+    <div id="portada-landing" class="portada-landing">
+        <img src="fotos/fotoportada.jpeg" alt="Portada" />
+        <h1>💓 Per a Samara 💓</h1>
+        <button id="entrar-btn">Entrar al regalet</button>
+    </div>
+    <div id="contingut-web" style="display:none;">
+        <div class="container">
+            <nav class="menu-redondo">
+                <div class="boton-con-texto">
+                    <a href="#" id="inici-btn" class="btn-redondo" title="Inici">🏡</a>
+                    <span class="texto-boton">Inici</span>
+                </div>
+                <div class="boton-con-texto">
+                    <a href="#" id="records-btn" class="btn-redondo" title="Records bonics">✨</a>
+                    <span class="texto-boton">Records bonics</span>
+                </div>
+                <div class="boton-con-texto">
+                    <a href="#" id="cancons-btn" class="btn-redondo" title="Cançons que em recorden a tu">🎶</a>
+                    <span class="texto-boton">Cançons</span>
+                </div>
+            </nav>
+            <div id="seccio-inici">
+                <h1>Per a Samara</h1>
+                <div class="mensaje"></div>
+                <div class="fotos"></div>
+                <div class="joc-diferencies">
+                    <h2>Así hi ha un minijoc amb sorpreses...</h2>
+                    <div class="imatges-diferencies" style="position:relative; display:inline-block;">
+                        <img src="fotos/cases-joc.jpg" alt="Joc de les diferències" id="cases-joc" style="width:700px;">
+                        <div class="zona-dif dreta" data-msg="Eres la millor novia del mon" style="position:absolute; left:420px; top:70px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#900; font-weight:bold; user-select:none; opacity:0;">1</div>
+                        <div class="zona-dif dreta" data-msg="Te ame moltissim carinyet" style="position:absolute; left:520px; top:200px; width:40px; height:50px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#900; font-weight:bold; user-select:none; opacity:0;">2</div>
+                        <div class="zona-dif dreta" data-msg="Eres guapissima i me encanta com eres" style="position:absolute; left:460px; top:250px; width:50px; height:50px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#900; font-weight:bold; user-select:none; opacity:0;">3</div>
+                        <div class="zona-dif dreta" data-msg="Meu pase super be sempre amb tu" style="position:absolute; left:630px; top:220px; width:30px; height:50px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#900; font-weight:bold; user-select:none; opacity:0;">4</div>
+                        <div class="zona-dif dreta" data-msg="Vuic estar tota la meua vida al teu costat" style="position:absolute; left:490px; top:140px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:18px; color:#900; font-weight:bold; user-select:none; opacity:0;">5</div>
+                    </div>
+                    <div id="missatge-dif" class="missatge-dif"></div>
+                </div>
+            </div>
+            <div id="seccio-records" style="display:none;">
+                <h1>Records especials</h1>
+                <div class="fotos-grid">
+                    <img src="fotos/recuerdo1.jpeg" alt="Recuerdo 1">
+                    <img src="fotos/recuerdo2.jpeg" alt="Recuerdo 2">
+                    <img src="fotos/recuerdo3.jpeg" alt="Recuerdo 3">
+                    <img src="fotos/recuerdo4.jpeg" alt="Recuerdo 4">
+                    <img src="fotos/recuerdo5.jpeg" alt="Recuerdo 5">
+                    <img src="fotos/recuerdo6.jpeg" alt="Recuerdo 6">
+                    <img src="fotos/recuerdo7.jpeg" alt="Recuerdo 7">
+                    <img src="fotos/recuerdo8.jpeg" alt="Recuerdo 8">
+                    <img src="fotos/recuerdo9.jpeg" alt="Recuerdo 9">
+                    <img src="fotos/recuerdo10.jpeg" alt="Recuerdo 10">
+                    <img src="fotos/recuerdo11.jpeg" alt="Recuerdo 11">
+                    <img src="fotos/recuerdo12.jpeg" alt="Recuerdo 12">
+                    <img src="fotos/recuerdo13.jpeg" alt="Recuerdo 13">
+                    <img src="fotos/recuerdo14.jpeg" alt="Recuerdo 14">
+                    <img src="fotos/recuerdo15.jpeg" alt="Recuerdo 15">
+                    <img src="fotos/recuerdo16.jpeg" alt="Recuerdo 16">
+                </div>
+            </div>
+            <div id="seccio-cancons" style="display:none;">
+                <h1>Cançons que m'agraden i em fan feliç com tu</h1>
+                <div class="audio-cancions">
+                    <div class="canco-box">
+                        <audio id="audio1" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço1.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço1.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(1)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">We Are The People</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time1">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio2" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço2.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço2.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(2)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Wonderwall</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time2">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio3" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço3.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço3.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(3)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Sparks</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time3">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio4" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço4.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço4.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(4)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Let It Happen</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time4">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio5" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço5.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço5.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(5)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Borderline</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time5">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio6" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço6.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço6.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(6)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Time To Pretend</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time6">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio7" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço7.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço7.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(7)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Bitter Sweet Symphony</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time7">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio8" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço8.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço8.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(8)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Kids</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time8">0:00 / 0:00</div>
+                    </div>
+                    <div class="canco-box">
+                        <audio id="audio9" preload="metadata" style="display: none;">
+                            <source src="musica/musicacanço9.mp3" type="audio/mpeg">
+                            <source src="musica/musicacanço9.mp3" type="audio/mp3">
+                            El teu navegador no suporta l'àudio.
+                        </audio>
+                        <button onclick="togglePlay(9)" style="background: #d72660; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; margin: 10px;">▶</button>
+                        <div style="margin-top: 10px; font-weight: bold; color: #d72660; font-size: 1.1em;">Undressed</div>
+                        <div style="margin-top: 5px; font-size: 0.9em; color: #666;" id="time9">0:00 / 0:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Registre del Service Worker per a PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('Service Worker registrat amb èxit:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Error registrant Service Worker:', error);
+                    });
+            });
+        }
+
+        // Gestió de la instal·lació de la PWA
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Mostrar botó d'instal·lació si es vol
+            // Aquí es pot afegir un botó per instal·lar l'app
+        });
+
+        // Mostrar directament el contingut si ja s'ha entrat en la sessió
+        if (sessionStorage.getItem('jaEntrat')) {
+            document.getElementById('portada-landing').style.display = 'none';
+            document.getElementById('contingut-web').style.display = 'block';
+        }
+        document.getElementById('entrar-btn').onclick = function() {
+            document.getElementById('portada-landing').style.display = 'none';
+            document.getElementById('contingut-web').style.display = 'block';
+            sessionStorage.setItem('jaEntrat', '1');
+            document.getElementById('audio-fons').play();
+        };
+        document.getElementById('inici-btn').onclick = function(e) {
+            e.preventDefault();
+            mostrarSeccio('seccio-inici');
+        };
+        document.getElementById('records-btn').onclick = function(e) {
+            e.preventDefault();
+            mostrarSeccio('seccio-records');
+        };
+        document.getElementById('cancons-btn').onclick = function(e) {
+            e.preventDefault();
+            mostrarSeccio('seccio-cancons');
+        };
+        function mostrarSeccio(id) {
+            document.getElementById('seccio-inici').style.display = 'none';
+            document.getElementById('seccio-records').style.display = 'none';
+            document.getElementById('seccio-cancons').style.display = 'none';
+            document.getElementById(id).style.display = 'block';
+        }
+        // Joc de les diferències amb fotos reals
+        let trobades = 0;
+        document.querySelectorAll('.zona-dif').forEach(function(el) {
+            el.addEventListener('click', function(e) {
+                if (!el.classList.contains('trobada')) {
+                    el.classList.add('trobada');
+                    trobades++;
+                    document.getElementById('missatge-dif').innerText = el.dataset.msg;
+                    el.style.outline = '2px solid #ff4e50';
+                    if (trobades === 5) {
+                        setTimeout(function() {
+                            document.getElementById('missatge-dif').innerText = 'Molt bee amor, les has trobades totes eres la millor💓💓💓';
+                            setTimeout(function() {
+                                document.getElementById('missatge-dif').innerText = '';
+                            }, 5000);
+                        }, 2000); // 2 segons de retard abans de mostrar el missatge final
+                    }
+                }
+                e.stopPropagation();
+            });
+        });
+        
+        // Funció per formatar el temps en minuts:segons
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+        
+        // Actualitzar el temps per a cada cançó
+        function updateTime(audio, timeElement) {
+            audio.addEventListener('loadedmetadata', function() {
+                timeElement.textContent = '0:00 / ' + formatTime(audio.duration);
+            });
+            
+            audio.addEventListener('timeupdate', function() {
+                timeElement.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+            });
+        }
+        
+        // Funció per alternar play/pause
+        function togglePlay(audioId) {
+            const audio = document.getElementById('audio' + audioId);
+            const button = event.target;
+            const audioFons = document.getElementById('audio-fons');
+            
+            if (audio.paused) {
+                // Parar la música de fons
+                audioFons.pause();
+                
+                // Parar totes les altres cançons
+                for (let i = 1; i <= 9; i++) {
+                    if (i !== audioId) {
+                        const altreAudio = document.getElementById('audio' + i);
+                        const altreButton = altreAudio.parentElement.querySelector('button');
+                        if (!altreAudio.paused) {
+                            altreAudio.pause();
+                            altreButton.textContent = '▶';
+                        }
+                    }
+                }
+                
+                // Reproduir la cançó seleccionada
+                audio.play();
+                button.textContent = '⏸';
+            } else {
+                // Pausar la cançó actual
+                audio.pause();
+                button.textContent = '▶';
+                
+                // Reproduir la música de fons
+                audioFons.play();
+            }
+        }
+        
+        // Aplicar a totes les cançons
+        document.addEventListener('DOMContentLoaded', function() {
+            const audios = document.querySelectorAll('#seccio-cancons audio');
+            audios.forEach(function(audio, index) {
+                const timeElement = document.getElementById('time' + (index + 1));
+                if (timeElement) {
+                    updateTime(audio, timeElement);
+                }
+                
+                // Afegir event listeners per a millor compatibilitat
+                audio.addEventListener('error', function(e) {
+                    console.log('Error carregant àudio:', e);
+                });
+                
+                audio.addEventListener('loadstart', function() {
+                    console.log('Començant a carregar àudio');
+                });
+                
+                audio.addEventListener('canplay', function() {
+                    console.log('Àudio pot reproduir-se');
+                });
+                
+                // Actualitzar botó quan acaba la cançó
+                audio.addEventListener('ended', function() {
+                    const button = audio.parentElement.querySelector('button');
+                    if (button) {
+                        button.textContent = '▶';
+                    }
+                    
+                    // Reproduir la música de fons quan acaba una cançó específica
+                    const audioFons = document.getElementById('audio-fons');
+                    audioFons.play();
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

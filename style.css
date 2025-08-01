@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b3e0ff 0%, #e0c3fc 100%);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 32px;
+}
+h1 {
+    color: #7b2ff2;
+}
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+.fotos img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.mensaje {
+    font-size: 1.2em;
+    margin: 24px 0;
+    color: #333;
+}
+audio {
+    margin-top: 32px;
+}
+.fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+}
+.fotos-grid img {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.menu-redondo {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.btn-redondo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border: none;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+}
+.btn-redondo:hover, .btn-redondo:focus {
+    transform: scale(1.12);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+    outline: none;
+}
+.boton-con-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-boton {
+    margin-top: 6px;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+.zona-dif {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.missatge-dif {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #111;
+  margin-top: 18px;
+}
+.portada-landing {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #b3e0ff 0%, #e0c3fc 100%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+}
+.portada-landing img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 32px;
+    background: transparent;
+    display: block;
+}
+.portada-landing h1 {
+    font-size: 3em;
+    margin-bottom: 32px;
+    color: #7b2ff2;
+    text-align: center;
+}
+#entrar-btn {
+    font-size: 1.5em;
+    padding: 18px 48px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.3s, transform 0.15s;
+    margin-top: 24px;
+}
+#entrar-btn:hover {
+    background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+    transform: scale(1.08);
+} 
+
+/* Estilos para el grid de canciones */
+.audio-cancions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.canco-box {
+    background: #fff3f8;
+    border-radius: 16px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 8px #ffb6c1a0;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.canco-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #ffb6c1c0;
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+    .audio-cancions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .canco-box {
+        padding: 15px 10px;
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .audio-cancions {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .canco-box {
+        padding: 20px 15px;
+    }
+} 
