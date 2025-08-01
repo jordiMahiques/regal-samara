@@ -2,7 +2,7 @@
   "name": "Regal per a Samara",
   "short_name": "Samara",
   "description": "Un regal especial amb records, cançons i sorpreses",
-  "start_url": "/",
+  "start_url": "/regal-samara/",
   "display": "standalone",
   "background_color": "#b3e0ff",
   "theme_color": "#7b2ff2",

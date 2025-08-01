@@ -186,7 +186,7 @@
         // Registre del Service Worker per a PWA
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/regal-samara/sw.js')
                     .then(function(registration) {
                         console.log('Service Worker registrat amb èxit:', registration.scope);
                     })
