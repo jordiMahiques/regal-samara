@@ -306,3 +306,35 @@ audio {
     display: block;
   }
 } 
+
+/* Mensaje para rotar el dispositivo */
+#rotate-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 2em;
+  color: #333;
+}
+
+@media only screen and (orientation: portrait) {
+  #rotate-message {
+    display: block;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: #f0f0f0;
+    /* Aquí puedes añadir más estilos específicos para horizontal */
+  }
+  #rotate-message {
+    display: none;
+  }
+} 
